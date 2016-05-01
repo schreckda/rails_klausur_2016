@@ -1,0 +1,36 @@
+h1 Listing categories
+
+table.ui.table
+  thead
+    tr
+      th Name
+      th Description
+      th Expression
+      th
+      th
+      th
+
+  tbody
+    - @categories.each do |category|
+      tr
+        td
+          = category.name
+          .ui.label = category.entries_sum
+        td = category.description
+        td = category.expression
+        td = link_to 'Show', category
+        td = link_to 'Edit', edit_category_path(category)
+        td = link_to 'Destroy', category, data: {:confirm => 'Are you sure?'}, :method => :delete
+      tr data-category-id=category.id
+        td
+        td colspan=5
+          = render category.book_entries
+    tr
+      td
+      td colspan=5
+        = render @book_entries_without_category
+
+br
+
+= link_to 'New Category', new_category_path, class: 'ui black button'
+= link_to 'New Book Entry', new_book_entry_path, class: 'ui green button'

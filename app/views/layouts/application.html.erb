@@ -7,8 +7,15 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
-
+<nav class="ui menu">
+  <a href="<%= root_path %>" class="item">Home</a>
+</nav>
+<main class="ui page grid">
+  <div class="row">
+    <div class="column">
+      <%= yield %>
+    </div>
+  </div>
+</main>
 </body>
 </html>
