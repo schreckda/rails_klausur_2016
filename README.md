@@ -28,6 +28,38 @@ Anfangs Zustand
 
 * 0 von 49 Tests
 
+Aufgabe
+=======
+
+Erstelle ein Programm zur Verwaltung mehrerer Konten. Dazu sind folgende Modelle notwendig (Beim Generator die Option -s nicht vergessen!):
+
+* User
+    * email:string
+    * name:string
+    * password_digest:string
+    * Hat mehrere Accounts
+* Account
+    * balance:integer
+    * Gehört zu genau einem User
+    * Hat viele BookEntries
+* Category
+    * name:string
+    * description:text
+    * expression:string
+    * Hat viele BookEntries
+* BookEntry
+    * Gehört zu einem Account
+    * Hat viele Categories
+    * description:text
+    * amount:integer
+
+Weiteres Vorgehen
+-----------------
+
+* Erzeuge die notwendigen Modelle, Tabellen und Join-Tabellen
+* Der `root_path` soll auf `'categories#index'` zeigen.
+* Zu einigen Tests finden sich in den jeweiligen Kommentaren zu dem Test weitere Hinweise zur Implementierung. 
+
 Abgabe
 ======
 

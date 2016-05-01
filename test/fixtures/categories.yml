@@ -1,0 +1,16 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  description: MyText
+  expression: MyString
+
+two:
+  name: MyString
+  description: MyText
+  expression: MyString
+
+sum:
+  name: MyString
+  description: MyText
+  expression: MyString

@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  description: MyText
+  amount: 1
+
+two:
+  description: MyText
+  amount: 2221
+
+sum1:
+  description: MyText
+  amount: 2221
+  categories: sum
+
+sum2:
+  description: MyText
+  amount: 1
+  categories: sum
