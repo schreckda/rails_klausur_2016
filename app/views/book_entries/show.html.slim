@@ -1,0 +1,15 @@
+p#notice = notice
+
+p
+  strong Description:
+  = @book_entry.description
+p
+  strong Amount:
+  = @book_entry.amount
+p
+  strong Account:
+  = @book_entry.account
+
+= link_to 'Edit', edit_book_entry_path(@book_entry)
+'|
+= link_to 'Back', book_entries_path

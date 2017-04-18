@@ -1,0 +1,25 @@
+h1 Listing book_entries
+
+table
+  thead
+    tr
+      th Description
+      th Amount
+      th Account
+      th
+      th
+      th
+
+  tbody
+    - @book_entries.each do |book_entry|
+      tr
+        td = book_entry.description
+        td = book_entry.amount
+        td = book_entry.account
+        td = link_to 'Show', book_entry
+        td = link_to 'Edit', edit_book_entry_path(book_entry)
+        td = link_to 'Destroy', book_entry, data: {:confirm => 'Are you sure?'}, :method => :delete
+
+br
+
+= link_to 'New Book entry', new_book_entry_path
